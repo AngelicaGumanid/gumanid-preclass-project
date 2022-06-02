@@ -5,7 +5,7 @@
 #  Hint - Legal Age.
 #  Print on console the result.
 
-def what_age(age)
+def is_adult?(age)
   if age >= 18
     return 'adult'
   else

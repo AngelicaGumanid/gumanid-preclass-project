@@ -1,5 +1,9 @@
 # RUBY HASH
-A Hash is a collection of key-value pairs like this: "employee" = > "salary". It is similar to an Array, except that indexing is done via arbitrary keys of any object type, not an integer index.
+A Hash is a collection of key-value pairs like for example:</br>
+```
+{ employee: "salary 20,000" }
+```
+It is similar to an Array, except that indexing is done via arbitrary keys of any object type, not an integer index.
 
 The order in which you traverse a hash by either key or value may seem arbitrary and will generally not be in the insertion order. If you attempt to access a hash with a key that does not exist, the method will return nil.
 
@@ -10,29 +14,12 @@ You can create an empty hash with the new class method:
 months = Hash.new
 ```
 
-You can also use new to create a hash with a default value, which is otherwise just nil:
+Accessing a hash by key:
 ``` Ruby
-months = Hash.new( "month" )
+my_hash = Hash[a: 100, b: 200]
 
-or
-
-months = Hash.new "month"
-```
-
-When you access any key in a hash that has a default value, if the key or value doesn't exist, accessing the hash will return the default value:
-``` Ruby
-months = Hash.new( "month" )
-
-puts "#{months[0]}"  #=> month
-puts "#{months[72]}" #=> month
-```
-
-If the key you are trying to access exist and have value:
-``` Ruby
-my_hash = Hash["a" => 100, "b" => 200]
-
-puts "#{my_hash['a']}" #=> 100
-puts "#{my_hash['b']}" #=> 200
+puts "#{my_hash[:a]}" #=> 100
+puts "#{my_hash[:b]}" #=> 200
 ```
 
 ### Looping through a hash with each

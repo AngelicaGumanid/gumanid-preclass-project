@@ -11,6 +11,18 @@ One way is with the new class method:
 names = Array.new
 ```
 
+Array with values
+
+```Ruby
+colors = ['red', 'green', 'blue']
+
+puts colors
+
+#=> red
+#=> green
+#=> blue
+```
+
 You can set the size of an array at the time of creating array:
 ```Ruby
 names = Array.new(20)
@@ -44,4 +56,22 @@ end
 #=> Current number is: 1
 #=> Current number is: 2
 #=> Current number is: 3
+```
+
+### Each with Index
+Each with Index does what the name indicates.
+It iterates through each element in an array or hash, and extracts the element,
+as well as the index (the element’s place in the array) and will transform
+both the element and its index based on the code you have written.
+
+```Ruby
+colors = ['red', 'green', 'blue']
+
+colors.each_with_index do | color, index |
+  puts "#{color} is number #{index} in the array"
+end
+
+#=> red is number 0 in the array
+#=> green is number 1 in the array
+#=> blue is number 2 in the array
 ```
